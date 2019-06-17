@@ -7,13 +7,13 @@
     <mat-dialog-content [formGroup]="form">
 
       <mat-form-field>
-        <textarea matInput placeholder="Start typing here" formControlName="blogtext"></textarea>
+        <textarea matInput placeholder="Start typing here..." formControlName="blogtext"></textarea>
       </mat-form-field>
 
     </mat-dialog-content>
 
     <mat-dialog-actions>
-      <button class="mat-raised-button">
+      <button class="mat-raised-button" (click)="saveBlogPost()">
         Save
       </button>
 

@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatCardModule, MatDialogModule} from '@angular/material';
+import {BlogPostService} from './services/blog-post-service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +17,11 @@ import {MatCardModule, MatDialogModule} from '@angular/material';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    BlogPostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
