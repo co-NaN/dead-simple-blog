@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-#blog-card {
+.blog-card {
   margin: 1vh 1vw 1vh 1vw;
   padding: 1vw;
 }

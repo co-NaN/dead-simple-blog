@@ -1,10 +1,10 @@
-<mat-card *ngFor="let blogPost of blogPosts" class="blogPostCard mat-elevation-z10">
+<mat-card *ngFor="let blogPost of blogPosts" class="blogPostCard mat-elevation-z10 blog-card">
   <mat-card-content>
     <p>{{blogPost.content}}</p>
   </mat-card-content>
 </mat-card>
 
-<mat-card id="blog-card" class="mat-elevation-z10">
+<mat-card class="mat-elevation-z10 blog-card">
   <mat-card-title>
     Write a new blog post!
   </mat-card-title>
@@ -13,7 +13,7 @@
     <mat-dialog-content [formGroup]="form">
 
       <mat-form-field>
-        <textarea matInput placeholder="Start typing here..." formControlName="blogtext"></textarea>
+        <textarea formControlName="postContent" matInput placeholder="Start typing here..."></textarea>
       </mat-form-field>
 
     </mat-dialog-content>
