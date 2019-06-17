@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {BlogPostService} from './services/blog-post-service';
+import {BlogPost} from './model/blog-post';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import {BlogPostService} from './services/blog-post-service';
 export class AppComponent {
   title = 'simple-blog';
   form: FormGroup;
+  blogPosts: BlogPost[];
 
   constructor(private blogPostService: BlogPostService) {}
 

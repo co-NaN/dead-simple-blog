@@ -1,3 +1,9 @@
+<mat-card *ngFor="let blogPost of blogPosts" class="blogPostCard mat-elevation-z10">
+  <mat-card-content>
+    <p>{{blogPost.content}}</p>
+  </mat-card-content>
+</mat-card>
+
 <mat-card id="blog-card" class="mat-elevation-z10">
   <mat-card-title>
     Write a new blog post!
