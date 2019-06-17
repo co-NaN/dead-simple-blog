@@ -1,0 +1,23 @@
+>>> body {
+  margin: 0;
+}
+
+#blog-card {
+  margin: 1vh 1vw 1vh 1vw;
+  padding: 1vw;
+}
+
+mat-dialog-actions {
+  display: block;
+}
+
+textarea {
+  height: 20vh;
+  width: 95vw;
+  resize: vertical;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  font-size: 1.5vmax;
+}
