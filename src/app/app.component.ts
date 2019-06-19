@@ -39,7 +39,10 @@ export class AppComponent implements OnInit {
       const blogPost = new BlogPost(null, this.form.value.blogPostContent);
       this.blogPostService.saveBlogPost(blogPost)
         .subscribe(
-          () => console.log('New blog post is saved.')
+          () => {
+            this.form.reset();
+            console.log('New blog post is saved.');
+          }
         );
     }
   }
