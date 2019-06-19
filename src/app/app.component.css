@@ -19,6 +19,7 @@ mat-dialog-actions {
   min-height: 30vh;
   text-align: justify;
   word-break: break-all;
+  white-space: pre-wrap;
 }
 
 textarea {
