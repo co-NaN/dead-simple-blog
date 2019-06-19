@@ -6,7 +6,7 @@
   <mat-card-content>
     <mat-dialog-content>
 
-      <mat-form-field [formGroup]="form" class="blogPostForm">
+      <mat-form-field [formGroup]="form" appearance="standard" class="blogPostForm">
         <textarea formControlName="blogPostContent"
                   matInput
                   placeholder="Start typing here..."></textarea>
@@ -25,6 +25,6 @@
 
 <mat-card *ngFor="let blogPost of blogPosts" class="blogPostCard mat-elevation-z10 blog-card">
   <mat-card-content class="blogPostContent">
-    <p>{{blogPost.content}}</p>
+    <div>{{blogPost.content}}</div>
   </mat-card-content>
 </mat-card>

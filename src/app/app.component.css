@@ -16,7 +16,9 @@ mat-dialog-actions {
 }
 
 .blogPostContent {
-  height: 30vh;
+  min-height: 30vh;
+  text-align: justify;
+  word-break: break-all;
 }
 
 textarea {
