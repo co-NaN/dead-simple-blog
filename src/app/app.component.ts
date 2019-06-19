@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   constructor(private blogPostService: BlogPostService) {
     this.form = new FormGroup(
-      {postContent: new FormControl()}
+      {blogPostContent: new FormControl()}
     );
   }
 
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   // TODO: refactor
   saveBlogPost() {
-    const blogPost = new BlogPost(null, this.form.value.postContent);
+    const blogPost = new BlogPost(null, this.form.value.blogPostContent);
     this.blogPostService.saveBlogPost(blogPost)
       .subscribe(
         () => console.log('New blog post is saved.')

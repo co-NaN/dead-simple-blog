@@ -10,10 +10,12 @@
   </mat-card-title>
 
   <mat-card-content>
-    <mat-dialog-content [formGroup]="form">
+    <mat-dialog-content>
 
-      <mat-form-field>
-        <textarea formControlName="postContent" matInput placeholder="Start typing here..."></textarea>
+      <mat-form-field [formGroup]="form">
+        <textarea formControlName="blogPostContent"
+                  matInput
+                  placeholder="Start typing here..."></textarea>
       </mat-form-field>
 
     </mat-dialog-content>
