@@ -11,9 +11,13 @@ mat-dialog-actions {
   display: block;
 }
 
+.blogPostForm {
+  width: 95vw;
+}
+
 textarea {
   height: 20vh;
-  width: 95vw;
+  /*width: 95vw;*/
   resize: vertical;
   font-family: Roboto, Arial, Helvetica, sans-serif;
   border-style: none;
