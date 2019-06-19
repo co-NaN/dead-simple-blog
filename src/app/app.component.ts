@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     const blogPost = new BlogPost(null, this.form.value.postContent);
     this.blogPostService.saveBlogPost(blogPost)
       .subscribe(
-        () => console.log('Blog post with id ${blogPost.id} is saved.')
+        () => console.log('New blog post is saved.')
       );
   }
 
