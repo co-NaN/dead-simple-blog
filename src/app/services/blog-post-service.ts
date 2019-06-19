@@ -9,11 +9,11 @@ export class BlogPostService {
   dummyBlogPosts: BlogPost[];
 
   constructor(private http: HttpClient) {
-    // TODO: replace with backend call
+    // // TODO: replace with backend call
     this.dummyBlogPosts = [];
-    this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc.'));
-    this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc. no. 2'));
-    this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc. no. 3'));
+    // this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc.'));
+    // this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc. no. 2'));
+    // this.dummyBlogPosts.unshift(new BlogPost(1, 'Lorem ipsum etc. no. 3'));
   }
 
   getAllBlogPosts(): Observable<BlogPost[]> {

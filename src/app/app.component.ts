@@ -1,8 +1,7 @@
-import {Component, Inject, OnInit, Optional} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from '@angular/forms';
 import {BlogPostService} from './services/blog-post-service';
 import {BlogPost} from './model/blog-post';
-import {MAT_DIALOG_DATA} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +13,10 @@ export class AppComponent implements OnInit {
   form: FormGroup;
   blogPosts: BlogPost[];
 
-  constructor(private blogPostService: BlogPostService,
-              private formBuilder: FormBuilder) {
+  constructor(private blogPostService: BlogPostService) {
+    this.form = new FormGroup(
+      {postContent: new FormControl()}
+    );
   }
 
   ngOnInit(): void {
@@ -33,14 +34,9 @@ export class AppComponent implements OnInit {
   }
 
   // TODO: refactor
-  saveBlogPost(@Optional() @Inject(MAT_DIALOG_DATA) blogPost: BlogPost) {
-    this.form = this.formBuilder.group(
-      {
-        postContent: [blogPost.content, Validators.required]
-      }
-    );
-    const stuff = this.form.value;
-    this.blogPostService.saveBlogPost(stuff)
+  saveBlogPost() {
+    const blogPost = new BlogPost(null, this.form.value.postContent);
+    this.blogPostService.saveBlogPost(blogPost)
       .subscribe(
         () => console.log('Blog post with id ${blogPost.id} is saved.')
       );
