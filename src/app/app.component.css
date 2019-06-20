@@ -15,12 +15,16 @@ mat-dialog-actions {
   width: 95vw;
 }
 
+.blogPostCard {
+  background-color: #FFFFCC;
+}
+
 .blogPostContent {
   min-height: 30vh;
   text-align: justify;
   word-break: break-all;
   white-space: pre-wrap;
-  font-size: 1vmax;
+  font-size: 1.5vmax;
 }
 
 textarea {

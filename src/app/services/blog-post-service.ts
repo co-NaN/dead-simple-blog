@@ -5,22 +5,15 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class BlogPostService {
-  // TODO: replace with backend call
-  dummyBlogPosts: BlogPost[];
 
-  constructor(private http: HttpClient) {
-    // // TODO: replace with backend call
-    this.dummyBlogPosts = [];
+  constructor(private httpClient: HttpClient) {
   }
 
   getAllBlogPosts(): Observable<BlogPost[]> {
-    // return of(this.dummyBlogPosts);
-    return this.http.get<BlogPost[]>('/api/blog/post/all');
+    return this.httpClient.get<BlogPost[]>('/api/blog/post/all');
   }
 
   saveBlogPost(blogPost: BlogPost) {
-    // this.dummyBlogPosts.unshift(blogPost);
-    // return of(blogPost);
-    return this.http.post('/api/blog/post', blogPost);
+    return this.httpClient.post('/api/blog/post', blogPost);
   }
 }

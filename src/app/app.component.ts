@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     this.blogPostService.getAllBlogPosts()
       .subscribe(
         (blogPosts) => {
-          this.blogPosts = blogPosts as BlogPost[];
+          this.blogPosts = blogPosts['payload'];
         }
       );
   }
