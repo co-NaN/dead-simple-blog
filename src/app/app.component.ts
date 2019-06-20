@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
     this.getAllBlogPosts();
   }
 
-  getAllBlogPosts() {
+  private getAllBlogPosts() {
     this.blogPosts = [];
     this.blogPostService.getAllBlogPosts()
       .subscribe(
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       );
   }
 
-  saveBlogPost() {
+  private saveBlogPost() {
     if (this.form.value.blogPostContent) {
       const blogPost = new BlogPost(this.form.value.blogPostContent);
       this.blogPostService.saveBlogPost(blogPost)
@@ -40,10 +40,15 @@ export class AppComponent implements OnInit {
           () => {
             this.form.reset();
             console.log('New blog post is saved.');
+            this.refreshPage();
           },
           err => console.log('An error occurred during saving blog post: ', err)
         );
     }
+  }
+
+  private refreshPage() {
+    this.getAllBlogPosts();
   }
 
 }
