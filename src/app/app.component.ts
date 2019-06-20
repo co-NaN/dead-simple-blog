@@ -33,10 +33,9 @@ export class AppComponent implements OnInit {
       );
   }
 
-  // TODO: refactor
   saveBlogPost() {
     if (this.form.value.blogPostContent) {
-      const blogPost = new BlogPost(null, this.form.value.blogPostContent);
+      const blogPost = new BlogPost(this.form.value.blogPostContent);
       this.blogPostService.saveBlogPost(blogPost)
         .subscribe(
           () => {

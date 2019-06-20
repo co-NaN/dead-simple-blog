@@ -2,8 +2,7 @@ export class BlogPost {
   id: number;
   content: string;
 
-  constructor(id: number, content: string) {
-    this.id = id;
+  constructor(content: string) {
     this.content = content;
   }
 }
