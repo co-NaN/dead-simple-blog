@@ -19,7 +19,7 @@ export function saveBlogPost(req: Request, res: Response) {
 }
 
 function generateId() {
-  const lastBlogPost: BlogPostEntity = BLOG_POSTS[BLOG_POSTS.length - 1];
+  const lastBlogPost: BlogPostEntity = BLOG_POSTS[0];
   if (lastBlogPost) {
     return lastBlogPost['id'] + 1;
   } else {

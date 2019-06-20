@@ -27,9 +27,8 @@ export class AppComponent implements OnInit {
     this.blogPosts = [];
     this.blogPostService.getAllBlogPosts()
       .subscribe(
-        (blogPosts) => {
-          this.blogPosts = blogPosts['payload'];
-        }
+        res => this.blogPosts = res['payload'],
+        err => console.log('An error occurred during retrieving blog posts: ', err)
       );
   }
 
@@ -41,7 +40,8 @@ export class AppComponent implements OnInit {
           () => {
             this.form.reset();
             console.log('New blog post is saved.');
-          }
+          },
+          err => console.log('An error occurred during saving blog post: ', err)
         );
     }
   }
